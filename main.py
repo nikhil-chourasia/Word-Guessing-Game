@@ -12,7 +12,7 @@ def showResult(score):
             time.sleep(0.2)
     print("Here is your score!")
     str(score)
-    Art = text2art(score, font = 'block', chr_ignore=True)
+    Art = text2art(str(score), font = 'block', chr_ignore=True)
     print(Art)
     print("Thanks for playing😊")
 
