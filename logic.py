@@ -1,9 +1,15 @@
-
+from rich.progress import Progress
+import time
 import word_bank as w
 import random
 
 def game(user):
     print(f"Hello {user}! Welcome to Dict-ective🕵🏻🧐")
+    with Progress() as progress:
+        task = progress.add_task("[red]Loading...", total = 100)
+        while not progress.finished:
+            progress.update(task, advance = 7)
+            time.sleep(0.2)
     print("Simple rule of the game! 50 points if you guess the charecter right and -10 for wrong guess. Enjoy😁✌🏻")
     score = 0
     word = random.choice(w.words)
@@ -28,5 +34,10 @@ def game(user):
             attempt += 1
             incorrectAttempt += 1
     print("Congractulations! You guessed the word🎉")
+    with Progress() as progress:
+        task = progress.add_task("[red]Loading stats...", total = 100)
+        while not progress.finished:
+            progress.update(task, advance = 7)
+            time.sleep(0.2)
     print(f"It took you {attempt} attempts out of which {incorrectAttempt} were incorrect.")
     return score
