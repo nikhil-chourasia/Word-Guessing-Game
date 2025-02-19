@@ -8,7 +8,25 @@ def game(user):
     score = 0
     word = random.choice(w.words)
     answers = list(word)
-    for i in range(4):
-        for j in range(i+1):
-            print(answers[j])
-        
+    answersRevealed = ["-"] * len(answers)
+    answersRevealed[0] = answers[0]
+    index = 1
+    attempt = 0
+    incorrectAttempt = 0
+    while index < len(answers):
+        print("Word:", " ".join(answersRevealed))
+        response = input("Guess the next letter: ").strip().lower()
+        if response == answers[index]:
+            print("Great Job!🎉 That's correct.. moving on to next one...")
+            score += 50
+            answersRevealed[index] = answers[index]
+            index += 1
+            attempt += 1
+        else:
+            print("Uh Oh!❌ Wrong guess.. Try again!")
+            score -= 10
+            attempt += 1
+            incorrectAttempt += 1
+    print("Congractulations! You guessed the word🎉")
+    print(f"It took you {attempt} attempts out of which {incorrectAttempt} were incorrect.")
+    return score
