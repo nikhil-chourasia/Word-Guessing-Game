@@ -61,9 +61,16 @@ Guess the next letter: p
 
 ## 📌 To-Do & Future Improvements  
 - [ ] Add different difficulty levels.  
-- [ ] Implement a leaderboard for high scores.  
-- [ ] Introduce a timer for extra challenge.
-- [ ] Implement this in GUI form.
+- [ ] Implement GUI for more interactive interface.  
+- [ ] Introduce a timer for extra challenge.  
+- [ ] Add sound effects for a more interactive experience.  
+- [ ] Create a multiplayer mode for competitive gameplay.
+      
+## 🤝 Contributing  
+Contributions are welcome! If you have suggestions for improvements, feel free to fork the repository and submit a pull request.  
+
+## 📜 License  
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
 
 ---
 
